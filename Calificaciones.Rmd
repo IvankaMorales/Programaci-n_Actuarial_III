@@ -1,0 +1,25 @@
+---
+title: "Calificaciones"
+author: "Ivanka Itzel Morales López"
+date: "6 de febrero de 2017"
+output: html_document
+---
+#Primer semetre
+##(Primavera 2016)
+
+ * Programación Actuarial I **8**
+ * Intr. a la Profesión Actuarial **7**
+ * DHPC **10**
+ * Conceptos de Cálculo **10**
+ * Matemáticas Básicas **10**
+ * Problemas de Mat.Básicas **10**
+
+#Segundo semestre
+##(Otoño 2016)
+
+ * Programación Actuarial II **7**
+ * Microeconomía **8**
+ * Cálculo Diferencial **5**
+ * Geometría Analítica **9**
+ * Teoría de Ecuaciones **8**
+
