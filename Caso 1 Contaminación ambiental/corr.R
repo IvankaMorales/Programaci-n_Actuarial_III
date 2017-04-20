@@ -1,7 +1,7 @@
 ###Parte 3
-directorio <- "~/GitHub/Programaci-n_Actuarial_III/specdata"  
-corr <- function(directorio, horizonte=0){
-    
+ 
+corr <- function(directorio = "~/GitHub/Programaci-n_Actuarial_III/specdata" , horizonte=0){
+    setwd <- directorio
     m <- vector("numeric")
     g <- vector("numeric")
     id <- 1:332
@@ -27,5 +27,5 @@ corr <- function(directorio, horizonte=0){
     print(m)
     
 }
-corr(directorio,horizonte=100)
+corr(,horizonte=800)
 

@@ -1,6 +1,7 @@
 ###Parte 2
-directorio<-("~/GitHub/Programaci-n_Actuarial_III/specdata")
-completos <- function(directorio, id = 1:332) {
+#directorio<-("~/GitHub/Programaci-n_Actuarial_III/specdata")
+completos <- function(directorio="~/GitHub/Programaci-n_Actuarial_III/specdata", id = 1:332) {
+    setwd <- directorio
     v = vector("numeric")
     for(i in id){
         if(i<10){
@@ -18,6 +19,4 @@ completos <- function(directorio, id = 1:332) {
     }
     data.frame("id"= id,"nobs"=v)
 }
-completos(directorio,id=1:332)
-
-
+completos(,id=1:332)

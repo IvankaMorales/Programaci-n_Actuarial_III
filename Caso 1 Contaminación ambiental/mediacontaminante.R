@@ -1,9 +1,7 @@
-
-
 ###Parte 1
-directorio <- "~/GitHub/Programaci-n_Actuarial_III/specdata"
-
-mediacontaminante <- function(directorio, contaminante, id = 1:332){
+mediacontaminante <- function(directorio="~/GitHub/Programaci-n_Actuarial_III/specdata", contaminante, id = 1:332){
+    setwd <- directorio
+    datos <- c()
     for(i in id){
         if(i<10){
             dato<-read.csv(paste("00",i,".csv",sep=""))
@@ -13,13 +11,12 @@ mediacontaminante <- function(directorio, contaminante, id = 1:332){
         }else{
             dato<-read.csv(paste(i,".csv",sep=""))
         }
-        datos <- c(dato[,contaminante])
+        datos <- c(datos,dato[,contaminante])
         medias <- mean(datos, na.rm=TRUE)
     }
-    mediafinal <- mean(medias)
-    mediafinal
+      medias
 }
 #"Sulfate" = 2 y "Nitrate" = 3
-mediacontaminante(directorio,"nitrate",258)
+mediacontaminante(,"sulfate",300)
 
 
