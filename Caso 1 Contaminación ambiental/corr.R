@@ -1,9 +1,8 @@
 ###Parte 3
 directorio <- "~/GitHub/Programaci-n_Actuarial_III/specdata"  
 corr <- function(directorio, horizonte=0){
-    iv <- 1:horizonte
-     
-   m <- vector("numeric")
+    
+    m <- vector("numeric")
     g <- vector("numeric")
     id <- 1:332
     for(n in id){
@@ -17,18 +16,16 @@ corr <- function(directorio, horizonte=0){
             dato<-read.csv(paste(n,".csv",sep=""))
         }
         
-        corre <- subset(dato,complete.cases(dato),select=c(sulfate,nitrate))
-            if(horizonte > 0){
-            j <- corre[iv,]
-            g<- cor(j$sulfate,j$nitrate)
+        corre <- data.matrix(dato)
+        coco<- corre[complete.cases(corre),]
+        if(nrow(coco)>horizonte){
+            #"Sulfate" = 2 y "Nitrate" = 3
+            g<- cor(coco[,2],coco[,3])
             m<-c(m,g)
-        }else{
-            m <- cor(core$sulfate,corre$nitrate)
-            m <- c(m,g)
-        }
+        }       
     }
     print(m)
-
+    
 }
-corr(directorio,horizonte=8)
+corr(directorio,horizonte=100)
 
